@@ -1,4 +1,4 @@
-//Librarys including
+//Libraries including
 #include <stdio.h>
 void main (){
 	//Printing information

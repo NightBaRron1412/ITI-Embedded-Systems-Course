@@ -1,4 +1,4 @@
-//Librarys inculding
+//Libraries including
 #include <stdio.h>
 void main (){
     //Variables declaration
