@@ -72,5 +72,13 @@ int ops(int op_id)
         scanf(" %d", &operand1);
         result = operand1++;
         break;
+
+    //Else
+    default:
+        printf("Wrong ID");
+        break;
+
+    //returning result
+    return result;
     }
 }
