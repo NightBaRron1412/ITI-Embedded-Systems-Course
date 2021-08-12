@@ -10,10 +10,10 @@ typedef struct class
     u8 language;
     u8 physics;
     u8 chemistry;
-} Students;
+} st_students;
 
 //Creating employee objects & initializing values of STD
-Students STD_students[10] = {{8871, 30, 69, 45, 27},
+st_students STD_students[10] = {{8871, 30, 69, 45, 27},
                              {8560, 30, 60, 28, 75},
                              {8086, 44, 95, 22, 39},
                              {8280, 40, 40, 73, 41},

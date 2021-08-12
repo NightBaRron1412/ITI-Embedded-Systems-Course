@@ -8,12 +8,12 @@ typedef struct employees
     u16 salary;
     u16 bonus;
     u16 deduction;
-} EMP_employee;
+} st_employee;
 
 //Creating employee objects
-EMP_employee emp1;
-EMP_employee emp2;
-EMP_employee emp3;
+st_employee emp1;
+st_employee emp2;
+st_employee emp3;
 
 void main()
 {
