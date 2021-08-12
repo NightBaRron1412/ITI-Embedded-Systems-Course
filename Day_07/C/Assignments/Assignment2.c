@@ -18,9 +18,9 @@ struct node *head = NULL; //A variable to declare the head of the list
 
 void main()
 {
-    u32 val;       //A variable to store the value of the node data
-    u8 choice = 0; //A variable to store the user input
-    u16 pos;       //A variable to store the user input for the position of the node
+    u32 val;   //A variable to store the value of the node data
+    u8 choice; //A variable to store the user input
+    u16 pos;   //A variable to store the user input for the position of the node
 
     while (1) //Creating an infinite loop
     {
@@ -64,6 +64,7 @@ void main()
             break;
 
         case 4: //Exit
+            printf("Thank You\nGood Bye");
             exit(1);
             break;
 
@@ -110,7 +111,7 @@ void print_list()
         struct node *ptr = head; //Assigning a pointer to iterate through the linked list
         u16 node_num = 1;        //A variable to track the number of nodes in the linked list
 
-        printf("-------------------------\n");
+        printf("\n\n-------------------------\n");
 
         while (ptr->next != NULL) //Iterating through the linked list till the last node
         {
@@ -126,7 +127,7 @@ void print_list()
 
     else
     {
-        printf("-------------------------\n"
+        printf("\n\n-------------------------\n"
                "List is Empty\n"
                "-------------------------\n\n");
     }
