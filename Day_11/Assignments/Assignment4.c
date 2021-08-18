@@ -19,34 +19,23 @@ void main()
 
     DIO_VidSetPortMode(CLCD_DATA_PORT, output);
 
-    CLCD_VidCreatSpecialChar(stickyMan, 1);
-    CLCD_VidCreatSpecialChar(stickyMan_handsInverted, 2);
-
+    CLCD_VidCreatSpecialChar(Alef, 4);
+    CLCD_VidCreatSpecialChar(Meem, 3);
+    CLCD_VidCreatSpecialChar(Yaa, 2);
+    CLCD_VidCreatSpecialChar(Raa, 1);
     CLCD_VidInit();
 
     while (1)
     {
-        for (u8 i = 0; i < 12; i += 2)
+        for (s8 i = 12; i >= 0; i--)
         {
             CLCD_VidDisplayClear();
             CLCD_VidGotoXY(0, i);
             CLCD_VidSendData(1);
-            _delay_ms(200);
-            CLCD_VidDisplayClear();
-            CLCD_VidGotoXY(0, i + 1);
             CLCD_VidSendData(2);
-            _delay_ms(200);
-        }
-        for (s8 i = 12; i > 0; i -= 2)
-        {
-            CLCD_VidDisplayClear();
-            CLCD_VidGotoXY(1, i);
-            CLCD_VidSendData(1);
-            _delay_ms(200);
-            CLCD_VidDisplayClear();
-            CLCD_VidGotoXY(1, i - 1);
-            CLCD_VidSendData(2);
-            _delay_ms(200);
+            CLCD_VidSendData(3);
+            CLCD_VidSendData(4);
+            _delay_ms(150);
         }
     }
 }

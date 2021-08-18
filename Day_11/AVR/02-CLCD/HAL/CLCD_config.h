@@ -12,13 +12,13 @@
 #define CLCD_CONFIG_H
 
 //Control Port
-#define CLCD_CTRL_PORT Port_A
+#define CLCD_CTRL_PORT Port_B
 #define CLCD_RS_PIN Pin_0
 #define CLCD_RW_PIN Pin_1
 #define CLCD_EN_PIN Pin_2
 
 //Data Port
-#define CLCD_DATA_PORT Port_B
+#define CLCD_DATA_PORT Port_A
 
 #endif /* CLCD_CONFIG_H */
 

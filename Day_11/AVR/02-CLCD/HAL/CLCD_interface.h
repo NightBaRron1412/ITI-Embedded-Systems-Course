@@ -36,10 +36,10 @@ u8 Alef[] = {
 u8 Meem[] = {
     0x00,
     0x00,
-    0x00,
-    0x07,
-    0x1D,
-    0x07,
+    0x06,
+    0x09,
+    0x19,
+    0x06,
     0x00,
     0x00};
 
@@ -62,6 +62,27 @@ u8 Raa[] = {
     0x04,
     0x08,
     0x10};
+
+u8 stickyMan[] = {
+    0x0E,
+    0x0A,
+    0x0E,
+    0x05,
+    0x0E,
+    0x14,
+    0x04,
+    0x0A};
+
+u8 stickyMan_handsInverted[] = {
+    0x0E,
+    0x0A,
+    0x0E,
+    0x14,
+    0x0E,
+    0x05,
+    0x04,
+    0x0A};
+
 /*------------------------------CLCD Funtions--------------------------*/
 
 void CLCD_VidSendCommand(u8 Copy_u8Command);                                //Function to send commands to CLCD
