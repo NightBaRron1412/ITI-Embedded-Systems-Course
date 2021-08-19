@@ -1,7 +1,7 @@
-#include "../Lib/Std_Types.h" //Includes standard types header
+#include "../Lib/Std_Types.h"      //Includes standard types header
 #include "../MCAL/DIO_interface.h" // Including DIO functions to control ports and pins
-#include "KPD_config.h" //Including config header
-#include "KPD_interface.h" // Including KPD functions
+#include "KPD_config.h"            //Including config header
+#include "KPD_interface.h"         // Including KPD functions
 
 u8 KPD_u8GetKey(void)
 {
