@@ -30,7 +30,6 @@ void main()
     u8 Local_u8PassArr[4];
     u8 Local_u8Result;
     u8 Local_u8Tries;
-    u8 Local_u8True = "False";
 
     CLCD_VidSendString("Enter Password: ");
 
@@ -52,7 +51,6 @@ void main()
     if (Local_u8PassArr[0] == '1' && Local_u8PassArr[1] == '2' && Local_u8PassArr[2] == '3' && Local_u8PassArr[3] == '4')
     {
         CLCD_VidDisplayClear();
-        Local_u8True = "True";
         CLCD_VidSendString("Welcome Amir");
     }
     else
@@ -81,7 +79,6 @@ void main()
             if (Local_u8PassArr[0] == '1' && Local_u8PassArr[1] == '2' && Local_u8PassArr[2] == '3' && Local_u8PassArr[3] == '4')
             {
                 CLCD_VidDisplayClear();
-                Local_u8True = "True";
                 CLCD_VidSendString("Welcome Amir");
                 break;
             }
