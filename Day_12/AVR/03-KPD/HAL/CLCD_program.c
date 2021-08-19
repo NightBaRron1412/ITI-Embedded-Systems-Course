@@ -18,7 +18,7 @@ void CLCD_VidSendCommand(u8 Copy_u8Command) //Function to send commands to CLCD
     DIO_VidSetPinValue(CLCD_CTRL_PORT, CLCD_EN_PIN, high);
 
     //Delay
-    _delay_us(10);
+    _delay_ms(2);
 
     //Clearing Enable pin
     DIO_VidSetPinValue(CLCD_CTRL_PORT, CLCD_EN_PIN, low);
@@ -39,7 +39,7 @@ void CLCD_VidSendData(u8 Copy_u8Data) //Function to send data to CLCD
     DIO_VidSetPinValue(CLCD_CTRL_PORT, CLCD_EN_PIN, high);
 
     //Delay
-    _delay_us(10);
+    _delay_ms(2);
 
     //Clearing Enable pin
     DIO_VidSetPinValue(CLCD_CTRL_PORT, CLCD_EN_PIN, low);
