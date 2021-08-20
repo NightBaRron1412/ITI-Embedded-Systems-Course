@@ -1,40 +1,60 @@
-#include <stdio.h>                //Including standard input/output library.
-#include <stdlib.h>               //Including standard library
-#include "../include/Std_Types.h" // Including standard types header file
+/******************************************************************************
+ * Copyright (C) 2021 by Amir Shetaia
+ *
+ * Redistribution, modification or use of this software in source or binary
+ * forms is permitted as long as the files maintain this copyright. 
+ * Amir Shetaia are not liable for any misuse of this material. 
+ *
+ *****************************************************************************/
+/**
+ * @file Clinical_Management_System.c
+ * @brief Clinical Management System
+ *
+ * A clinical management system that contains 2 modes which are Admin mode & User Mode
+ * 
+ * In admin mode:
+ * 
+ * The system asks for password, the default password is 1234. The system allows 3 trails for the password
+ * entry, if the entered password was incorrect for 3 consecutive times, the system shall close. After login
+ * in the admin mode, the system shall provide the following features:
+ * 
+ * 1. Add new patient record:
+ * To add a new patient, the user shall admin shall enter these basic information: name, age, gender and
+ * ID. The ID shall be unique for the user, if the entered ID is already exists, the system shall reject the
+ * entry.
+ * 
+ * 2. Edit patient record
+ * By entering patient ID the system shall checks if the ID exists, the system shall allow the user to edit the
+ * patient information. If not, the system shall display incorrect ID message.
+ * 
+ * 3. Reserve a slot with the doctor
+ * By default there are 5 available slots, 2pm to 2:30pm, 2:30pm to 3pm, 3pm to 3:30pm, 4pm to 4:30pm
+ * and 4:30pm to 5pm. Upon opening of this window, the system shall display the available slots. The
+ * admin shall enter the patient ID and the desired slot. The reserved slot shall not appear again in the next
+ * patient reservation.
+ * 
+ * 4. Cancel reservation.
+ * The admin can cancel a reservation by entering the patient ID. This reservation shall be shown again in
+ * the available slots window.
+ * 
+ * In user mode:
+ * 
+ * There is no password. The system allows the following features:
+ * 1. View patient record.
+ * By entering the patient ID, the system shall show the basic information for the patient.
+ * 
+ * 2. View today’s reservations.
+ * In this view, the system shall print all reservations with the patient ID attached to each reservation slot.
+ *
+ * @author Amir Shetaia
+ * @date 21 Aug 2021
+ *
+ */
 
-/*--------------------------Funtions Prototypes----------------------------------*/
-
-void admin_mode();             //A prototype for a function that contains admin mode password input and menu
-void add_new_patient();        // A prototype for a function that adds a new patient
-void edit_patient_record();    //A prototype for a function that edits patient record
-void doctor_reservation();     //A prototype for a function that reserves a doctor appointment
-void cancel_reservation();     //A prototype for a function that cancels a doctor appointment
-void user_mode();              //A prototype for a function that contains user mode menu
-void view_patient_record();    //A prototype for a function that views patient record with id
-void view_today_reservation(); //A prototype for a function that views all today reservations with patients id
-
-/*----------------------User defined types----------------------------------------*/
-
-typedef enum // Enum data type for storing boolean values
-{
-    True,
-    False,
-    NOT_ENTERED = 404,
-    admin_password = 1234,
-    EMPTY = 0
-} Enut_CMS;
-
-struct patient_node //a node structure for patients linked list
-{
-    u8 name[20];
-    u16 age;
-    u8 gender;
-    u16 id;
-    struct patient_node *next;
-};
-
-//An array containing reservations and patient IDs associated with every slot
-u16 reservations[] = {0 /*2pm to 2:30pm*/, 0 /*2:30pm to 3pm*/, 0 /*3pm to 3:30pm*/, 0 /*4pm to 4:30pm*/, 0 /*4:30pm to 5pm*/};
+#include <stdio.h>                      //Including standard input/output library.
+#include <stdlib.h>                     //Including standard library
+#include "../include/Std_Types.h"       // Including standard types header file
+#include "Clinical_Management_System.h" //Including Header file for funtions and defiend types declerations
 
 struct patient_node *head = NULL;   //Creating head pointer for the first node as a global variable to save it's value
 u32 list_length = 0;                //Creating a global variable for storing the length of the linked list
