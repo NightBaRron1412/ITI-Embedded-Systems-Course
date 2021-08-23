@@ -3,7 +3,7 @@
  *
  * Redistribution, modification or use of this software in source or binary
  * forms is permitted as long as the files maintain this copyright. 
- * Amir Shetaia are not liable for any misuse of this material. 
+ * Amir Shetaia is not liable for any misuse of this material. 
  *
  *****************************************************************************/
 /**

@@ -3,7 +3,7 @@
  *
  * Redistribution, modification or use of this software in source or binary
  * forms is permitted as long as the files maintain this copyright. 
- * Amir Shetaia are not liable for any misuse of this material. 
+ * Amir Shetaia is not liable for any misuse of this material. 
  *
  *****************************************************************************/
 /**
@@ -168,7 +168,7 @@ void admin_mode() //A function that contains admin mode password input and menu
     }
 }
 
-void add_new_patient() //A prototype for a function that adds a new patient
+void add_new_patient() //A function that adds a new patient
 {
     u8 unique_id = True; //Creating a flag for unique patient id
 
@@ -242,7 +242,7 @@ void add_new_patient() //A prototype for a function that adds a new patient
     printf("\nPatient Added!\n\n"); //Printing out a message
 }
 
-void edit_patient_record() //A prototype for a function that edits patient record
+void edit_patient_record() //A function that edits patient record
 
 {
     if (list_length == EMPTY) //Checking if the list is empty
@@ -333,7 +333,7 @@ void edit_patient_record() //A prototype for a function that edits patient recor
     }
 }
 
-void doctor_reservation() //A prototype for a function that reserves a doctor appointment
+void doctor_reservation() //A function that reserves a doctor appointment
 {
     if (list_length == EMPTY)
     {
@@ -417,7 +417,7 @@ void doctor_reservation() //A prototype for a function that reserves a doctor ap
     printf("\nSlot reserved successfully\n\n"); //Printing out information
 }
 
-void cancel_reservation() //A prototype for a function that cancels a doctor appointment
+void cancel_reservation() //A function that cancels a doctor appointment
 {
     if (list_length == EMPTY) //Checking if list is empty
     {
@@ -449,7 +449,7 @@ void cancel_reservation() //A prototype for a function that cancels a doctor app
 
 /*--------------------------User Mode--------------------------------------*/
 
-void user_mode() //A prototype for a function that contains user mode menu
+void user_mode() //A function that contains user mode menu
 {
     u16 feature_choice; //A variable to store feature chose by user
 
@@ -477,7 +477,7 @@ void user_mode() //A prototype for a function that contains user mode menu
     }
 }
 
-void view_patient_record() //A prototype for a function that views patient record with id
+void view_patient_record() //A function that views patient record with id
 {
     if (list_length == EMPTY) //Checking if list is
     {
@@ -534,7 +534,7 @@ void view_patient_record() //A prototype for a function that views patient recor
     }
 }
 
-void view_today_reservation()
+void view_today_reservation() //A function that views all today reservations with patients id
 {
     u8 empty_reservation_num = EMPTY; //A variable to store number of empty reservation slots
 
