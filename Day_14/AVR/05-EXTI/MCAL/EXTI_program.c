@@ -75,4 +75,21 @@ void EXTI1_VidInit()
 
 void EXTI2_VidInit()
 {
+    /*------------------Sense control-----------------------------*/
+#if EXTI2_SENSE_CONTROL == EXTI_FALLING_EDGE_SC
+
+    CLR_BIT(MCUCSR, MCUCSR_ISC2_PIN);
+
+#elif EXTI2_SENSE_CONTROL == EXTI_RISING_EDGE_SC
+
+    SET_BIT(MCUCSR, MCUCR_ISC2_PIN);
+
+#else
+
+#error No Sense control selected, kindly take a look at Config File.
+
+#endif
+
+    //Enable interupt
+    SET_BIT(GICR, GICR_INT1_PIN);
 }

@@ -25,10 +25,10 @@
 /*---------------------------MCU Control and Status Register-------------------*/
 
 //Defining MCU Control and Status Register memory address for INT2
-#define MCUSCR *((volatile u8 *)(0x54))
+#define MCUCSR *((volatile u8 *)(0x54))
 
 //Defining MCU Control Register bit numbers for INT2
-#define MCUSCR_ISC2_PIN 6
+#define MCUCSR_ISC2_PIN 6
 
 /*----------------------------General Interput Control Register-------------------*/
 

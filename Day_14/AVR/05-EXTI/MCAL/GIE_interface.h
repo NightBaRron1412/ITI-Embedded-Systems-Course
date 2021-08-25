@@ -1,6 +1,6 @@
 /** @file GIE_private.h
  * 
- * @brief A header file including to enable or disable GIE 
+ * @brief A header file including functions prototypes to enable or disable GIE 
  *
  * @author Amir Shetaia
  * @version 1.0
