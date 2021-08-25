@@ -15,8 +15,7 @@
 
 #define ADC_AREF_INTERNAL_OFF 0    /*AREF, Internal Vref turned off */
 #define ADC_AVCC_EXTCAP_AREF 1     /*AVCC with external capacitor at AREF pin */
-#define ADC_RESERVED 2             /*Reserved */
-#define ADC_INTERNAL_EXTCAP_AREF 3 /*Internal 2.56V Voltage Reference with external capacitor at AREF pin */
+#define ADC_INTERNAL_EXTCAP_AREF 2 /*Internal 2.56V Voltage Reference with external capacitor at AREF pin */
 
 #define ADC_REFRENCE_SELECTION ADC_AVCC_EXTCAP_AREF
 
@@ -24,20 +23,7 @@
  * Options:
  * ADC_AREF_INTERNAL_OFF
  * ADC_AVCC_EXTCAP_AREF
- * ADC_RESERVED
  * ADC_INTERNAL_EXTCAP_AREF
- */
-
-/* Left Or Right Adjustment of Data Registers */
-#define ADC_LEFT_ADJUST 0
-#define ADC_RIGHT_ADJUST 1
-
-#define ADC_REGISTER_ADJUSTMENT ADC_RIGHT_ADJUST
-
-/**
- * Options:
- * ADC_LEFT_ADJUST
- * ADC_RIGHT_ADJUST
  */
 
 /* Bits 2:0 ---- Pre Scalar Bits */

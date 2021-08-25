@@ -18,11 +18,6 @@ void ADC_VidInit(void)
     SET_BIT(ADMUX, ADMUX_REFS0);
     CLR_BIT(ADMUX, ADMUX_REFS1);
 
-#elif ADC_REFRENCE_SELECTION == ADC_RESERVED
-
-    CLR_BIT(ADMUX, ADMUX_REFS0);
-    SET_BIT(ADMUX, ADMUX_REFS1);
-
 #elif ADC_REFRENCE_SELECTION == ADC_INTERNAL_EXTCAP_AREF
 
     SET_BIT(ADMUX, ADMUX_REFS0);
@@ -34,20 +29,9 @@ void ADC_VidInit(void)
 
 #endif
 
-//Activate Adjust
-#if ADC_REGISTER_ADJUSTMENT == ADC_RIGHT_ADJUST
+    //Activate Adjust
 
     CLR_BIT(ADMUX, ADMUX_ADLAR);
-
-#elif ADC_REFRENCE_SELECTION == ADC_LEFT_ADJUST
-
-    SET_BIT(ADMUX, ADMUX_ADLAR);
-
-#else
-
-#error No Adjustment selected, kindly take a look at Config File.
-
-#endif
 
 //Select 128 prescalar
 #if ADC_PRESCALER == ADC_PRESCALER_2
