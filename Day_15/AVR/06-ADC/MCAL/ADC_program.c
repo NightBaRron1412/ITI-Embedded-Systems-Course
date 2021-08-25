@@ -29,9 +29,21 @@ void ADC_VidInit(void)
 
 #endif
 
-    //Activate Adjust
+    //Resolution selection
+
+#if ADC_READING_RESOLUTION == ADC_10_BIT
 
     CLR_BIT(ADMUX, ADMUX_ADLAR);
+
+#elif ADC_READING_RESOLUTION == ADC_8_BIT
+
+    SET_BIT(ADMUX, ADMUX_ADLAR);
+
+#else
+
+#error No Resolution selected, kindly take a look at Config File.
+
+#endif
 
 //Select 128 prescalar
 #if ADC_PRESCALER == ADC_PRESCALER_2
@@ -103,10 +115,22 @@ u16 ADC_VidRead(u8 Copy_u8Channel)
     //Clear interrupt flag
     SET_BIT(ADCSRA, ADCSRA_ADIF);
 
+#if ADC_READING_RESOLUTION == ADC_10_BIT
+
     u16 lowerbyte, result;
 
     lowerbyte = ADCL;
     result = ADCH * 256;
     result += lowerbyte;
     return (result);
+
+#elif ADC_READING_RESOLUTION == ADC_8_BIT
+
+    return (ADCH);
+
+#else
+
+#error No Resolution selected, kindly take a look at Config File.
+
+#endif
 }

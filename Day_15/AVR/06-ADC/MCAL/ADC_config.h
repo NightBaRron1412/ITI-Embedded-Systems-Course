@@ -26,6 +26,18 @@
  * ADC_INTERNAL_EXTCAP_AREF
  */
 
+/* Left Or Right Adjustment of Data Registers for reading resolutions*/
+#define ADC_10_BIT 0
+#define ADC_8_BIT 1
+
+#define ADC_READING_RESOLUTION ADC_8_BIT
+
+/**
+ * Options:
+ * ADC_10_BIT
+ * ADC_8_BIT
+ */
+
 /* Bits 2:0 ---- Pre Scalar Bits */
 
 #define ADC_PRESCALER_2 2

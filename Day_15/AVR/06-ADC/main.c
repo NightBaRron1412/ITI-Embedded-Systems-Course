@@ -18,7 +18,7 @@ void main()
 
     while (1)
     {
-        ADCVal = ((ADC_VidRead(A0) * 5) / 1.023);
+        ADCVal = ((ADC_VidRead(A0) * 5) / 0.255);
         
         if (ADCVal > 0 && ADCVal < 1500)
         {
