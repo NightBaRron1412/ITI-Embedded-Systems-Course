@@ -15,9 +15,9 @@ u8 val[12];
 void main()
 {
     TWI_VidInit();
-    EEPROM_VidWirteBlock(0x00, "Menna Ayman");
+    EEPROM_VidWirteBlock(0x00, "Nourhan Khalid");
 
     EEPROM_VidReadBlock(0x00, 12, val);
 
-    EEPROM_VidWirteBlock(0x0B, " A7la Ba4mohandesa");
+    EEPROM_VidWirteBlock(0x0E, " A7la Ba4mohandesa");
 }

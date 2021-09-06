@@ -9,8 +9,8 @@
  */
 
 
-#ifndef __EEPROM_CONFIG_H__
-#define __EEPROM_CONFIG_H__
+#ifndef EEPROM_CONFIG_H
+#define EEPROM_CONFIG_H
 
 #define EEPROM_ADDRESS 0X51
 

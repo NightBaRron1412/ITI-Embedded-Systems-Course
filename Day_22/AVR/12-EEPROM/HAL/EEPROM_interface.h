@@ -8,8 +8,8 @@
  *
  */
 
-#ifndef __EEPROM_INTERFACE_H__
-#define __EEPROM_INTERFACE_H__
+#ifndef EEPROM_INTERFACE_H
+#define EEPROM_INTERFACE_H
 
 void EEPROM_VidWrite(u8 Copy_u8Address, u8 Copy_u8Value);
 
