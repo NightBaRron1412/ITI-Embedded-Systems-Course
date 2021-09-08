@@ -19,8 +19,8 @@
 
 /*-----------------------------------------Registers Max Values---------------------------------------------*/
 
-#define TMR_MAXVAL_TIMER02_REG 256
-#define TMR_MAXVAL_TIMER1_REG 65536
+#define TMR_MAXVAL_TIMER02_REG 256U
+#define TMR_MAXVAL_TIMER1_REG 65536U
 
 /*-----------------------------------------Timer 0---------------------------------------------*/
 

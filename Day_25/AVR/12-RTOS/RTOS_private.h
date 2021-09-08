@@ -11,6 +11,9 @@
 #ifndef RTOS_PRIVATE_H
 #define RTOS_PRIVATE_H
 
+#define MCUCR *((volatile u8 *)(0x35))
+#define MCUCR_SE 7
+
 typedef struct
 {
 

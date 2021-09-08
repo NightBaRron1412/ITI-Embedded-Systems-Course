@@ -738,6 +738,7 @@ void __vector_10()
         TMR_u32Timer0Counter++;
         if (TMR_u32Timer0Counter == TMR_u32ReqTimer0Cntr)
         {
+        	TMR_u32Timer0Counter = 0;
             PVCallBack[TMR_TIMER0](); /*The ISR action*/
         }
     }
@@ -751,6 +752,7 @@ void __vector_7()
         TMR_u32Timer1Counter++;
         if (TMR_u32Timer1Counter == TMR_u32ReqTimer1Cntr)
         {
+        	TMR_u32Timer1Counter = 0;
             PVCallBack[TMR_TIMER1](); /*The ISR action*/
         }
     }
@@ -764,6 +766,7 @@ void __vector_8()
         TMR_u32Timer1Counter++;
         if (TMR_u32Timer1Counter == TMR_u32ReqTimer1Cntr)
         {
+        	TMR_u32Timer1Counter = 0;
             PVCallBack[TMR_TIMER1](); /*The ISR action*/
         }
     }
@@ -777,6 +780,7 @@ void __vector_4()
         TMR_u32Timer2Counter++;
         if (TMR_u32Timer2Counter == TMR_u32ReqTimer2Cntr)
         {
+        	TMR_u32Timer2Counter = 0;
             PVCallBack[TMR_TIMER2](); /*The ISR action*/
         }
     }

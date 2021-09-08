@@ -35,7 +35,7 @@
 #define TMR_FASTPWM_ICR1 6
 #define TMR_FASTPWM_OCRA1 7
 
-#define TMR_TIMER0_MODE TMR_FASTPWM_8BIT
+#define TMR_TIMER0_MODE TMR_CTC
 #define TMR_TIMER1_MODE TMR_FASTPWM_8BIT
 #define TMR_TIMER2_MODE TMR_NORMAL
 
@@ -95,7 +95,7 @@
 #define TMR_CLEAR_OCX 2
 #define TMR_SET_OCX 3
 
-#define TMR_TIMER0_COPT_MODE TMR_CLEAR_OCX
+#define TMR_TIMER0_COPT_MODE TMR_NORMAL
 #define TMR_TIMER1_COPT_MODE TMR_CLEAR_OCX
 #define TMR_TIMER2_COPT_MODE TMR_NORMAL
 
@@ -122,7 +122,7 @@
 */
 
 //output compare interrupt for timers
-#define TMR_TIMER0_CTC_INT TMR_DIS_INT
+#define TMR_TIMER0_CTC_INT TMR_EN_INT
 #define TMR_TIMER1_CTC_INT TMR_DIS_INT
 #define TMR_TIMER2_CTC_INT TMR_DIS_INT
 
@@ -176,7 +176,7 @@ will be determined (in case of TMR_FASTPWM_ICR1 mode)*/
 #define TMR_Timer2Preload 0
 
 //Required counts for counters
-#define TMR_ReqTimer0Cntr 0
+#define TMR_ReqTimer0Cntr 1
 #define TMR_ReqTimer1Cntr 0
 #define TMR_ReqTimer2Cntr 0
 

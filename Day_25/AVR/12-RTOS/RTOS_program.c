@@ -18,14 +18,14 @@ void RTOS_VidStart()
     GIE_VidEnable();
 }
 
-void RTOS_VidCreateTask(u8 Copy_u8Priority, u16 Copy_u16Periodicity, void (*func)(void))
+void RTOS_VidCreateTask(u8 Copy_u8Priority, u16 Copy_u16Periodicity, u16 Copy_u16InitialDelay, void (*func)(void))
 {
     if (Copy_u8Priority < RTOS_TASK_NUM)
     {
         TaskBlocksArr[Copy_u8Priority].Periodicity = Copy_u16Periodicity;
         TaskBlocksArr[Copy_u8Priority].TaskFunc = func;
         TaskBlocksArr[Copy_u8Priority].RunMe = 0;
-        TaskBlocksArr[Copy_u8Priority].TaskCounter = 0;
+        TaskBlocksArr[Copy_u8Priority].TaskCounter = Copy_u16InitialDelay;
     }
 }
 
@@ -76,4 +76,10 @@ static void VidAlgorithm()
             }
         }
     }
+}
+
+static void voidSleep()
+{
+    SET_BIT(MCUCR, MCUCR_SE);
+    __asm__ __volatile__("SLEEP" ::);
 }
